@@ -13,7 +13,7 @@ import cv2
 import logging
 
 image = "screenshot"
-path = # Yous path
+path = # Mention a path to store your files
 system_information = "system.txt"
 timer = 30
 count = 0

